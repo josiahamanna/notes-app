@@ -1,9 +1,11 @@
-// const validator = require('validator')
-// const notesContent = require('./notes')
+const notesContent = require('./notes')
 const chalk = require('chalk')
 
-// const notes = notesContent()
-const successMesg = chalk.bold.inverse.green('Success!')
-console.log(successMesg)
+const notes = notesContent()
+console.log(notes)
 
-// console.log(validator.isEmail('nissi@example.com'))
+if (process.argv[2] == 'add') {
+    console.log('Adding notes . . .')
+} else if (process.argv[2] == 'remove') {
+    console.log('removing notes')
+}
